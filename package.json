@@ -1,0 +1,26 @@
+{
+  "name": "paper-design-system",
+  "version": "1.0.0",
+  "description": "Sistema agéntico autónomo para Paper.Design guiado por especificaciones y Paper MCP",
+  "type": "module",
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "preinstall": "node -e \"if (!process.env.npm_config_user_agent?.includes('pnpm')) { console.error('\\n\\x1b[31m[ERROR]\\x1b[0m Este proyecto usa pnpm exclusivamente. Ejecuta: pnpm install\\n'); process.exit(1); }\"",
+    "test:typography": "node evals/tests/typography.eval.ts",
+    "test:tokens": "node evals/tests/tokens.eval.ts",
+    "test:overflow": "node evals/tests/overflow.eval.ts",
+    "test:contract": "node evals/tests/contract.eval.ts",
+    "test:flyer": "node evals/tests/flyer-hierarchy.eval.ts",
+    "drift": "node specs/drift/drift-detector.ts"
+  },
+  "keywords": [
+    "paper",
+    "mcp",
+    "agents",
+    "spec-driven-development",
+    "design-system",
+    "pnpm"
+  ],
+  "author": "Paper.Design Team",
+  "license": "MIT"
+}

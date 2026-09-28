@@ -1,0 +1,27 @@
+# Dependencias y PNPM
+node_modules/
+.pnpm-store/
+package-lock.json
+
+# Salidas de compilación
+dist/
+
+# Reportes efímeros de auditoría
+specs/drift/*_drift_report.json
+
+# Logs del sistema
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Depuración y observabilidad efímera (conservando .gitkeep)
+.debug/snapshots/*.json
+.debug/replays/*.json
+.observability/logs/*.log
+.observability/traces/*.jsonl
+.observability/metrics/*.json
