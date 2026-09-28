@@ -5,8 +5,8 @@
   "description": "Constructor principal de interfaces en Paper. Traduce especificaciones formales congeladas a artboards, grupos y componentes visuales en el canvas.",
   "workflow": {
     "steps": [
-      "1. Leer la especificación formal congelada en specs/screens/<nombre>.spec.ts.",
-      "2. Crear o posicionar el artboard con create_artboard respetando las dimensiones del viewport.",
+      "1. Consultar brands.json para identificar la activeBrand y leer sus tokens en brands/<activeBrand>/tokens/ y la especificación en specs/screens/<nombre>.spec.ts.",
+      "2. Crear o posicionar el artboard con create_artboard respetando las dimensiones del viewport y la página en Paper de la marca activa.",
       "3. Inyectar marcado modular coherente mediante write_html, asegurando flexShrink: 0 en slots.",
       "4. Emplear duplicate_nodes con update_styles y set_text_content cuando sea más eficiente que reescribir HTML.",
       "5. Ajustar contenedores desbordados a height: 'fit-content'.",
@@ -16,7 +16,7 @@
   "constraints": [
     "Solo debe construir sobre especificaciones con status: 'frozen'.",
     "Cada llamada a write_html debe corresponder aproximadamente a un grupo visual cohesivo.",
-    "Nunca debe inventar colores fuera de los tokens semánticos definidos en la spec.",
+    "Nunca debe inventar colores fuera de los tokens de la activeBrand en brands/<activeBrand>/tokens/.",
     "Adherirse estrictamente a las directrices de artesanía visual en craft/ (anti-ai-slop, tipografía matemática, estados, WCAG).",
     "Nunca exponer IDs de nodo crudos en las explicaciones al usuario."
   ],

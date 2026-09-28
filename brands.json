@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "activeBrand": "linear-tech",
+  "brands": {
+    "linear-tech": {
+      "id": "linear-tech",
+      "name": "Linear Tech",
+      "description": "Herramienta de desarrollo y seguimiento de proyectos con estética técnica dark mode",
+      "basePreset": "linear",
+      "paperPage": "Linear Tech Canvas",
+      "stateHash": "449bf48a8bae94d064fa9e7fc151eb009baa5a5c8eaf043ee4c86ca6e05b38f8",
+      "createdAt": "2026-09-28T05:00:00.000Z",
+      "updatedAt": "2026-09-28T05:44:15.077Z"
+    },
+    "lumina-pay": {
+      "id": "lumina-pay",
+      "name": "Lumina Pay",
+      "description": "Pasarela de pagos transfronterizos B2B de alta conversión, confianza e interfaz limpia",
+      "basePreset": "stripe",
+      "paperPage": "Lumina Pay Canvas",
+      "stateHash": "50973158b8b98bc45c3fda93c601a741f79b93ca09f2da0cb0b79955654d2480",
+      "createdAt": "2026-09-28T05:00:00.000Z",
+      "updatedAt": "2026-09-28T05:44:14.295Z"
+    },
+    "swiss-studio": {
+      "id": "swiss-studio",
+      "name": "Swiss Studio",
+      "description": "Estudio de diseño editorial, posters y flyers de alto impacto gráfico basados en retícula internacional",
+      "basePreset": "swiss",
+      "paperPage": "Swiss Studio Canvas",
+      "stateHash": "2b9d9fbbbd66290b202c7657c0e522e1702260cb3a0acccd2adbf3c83b724692",
+      "createdAt": "2026-09-28T05:00:00.000Z",
+      "updatedAt": "2026-09-28T05:00:00.000Z"
+    }
+  }
+}

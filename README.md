@@ -42,10 +42,21 @@ Sistemas visuales completos intercambiables (`pnpm run preset:apply <nombre>`):
 - **Bento**: Grillas modulares de contenido, tarjetas redondeadas y micro-etiquetas.
 - **Swiss**: Tipografía protagonista, asimetría estructurada y acento rojo internacional.
 
+## Sistema Multi-Marca (Multi-Brand Architecture)
+
+El workspace soporta gestión concurrente y conmutación atómica de marcas mediante [`brands.json`](./brands.json) y el gestor [`scripts/brands/brand-manager.ts`](./scripts/brands/brand-manager.ts):
+- **Aislamiento Total**: Cada marca reside en [`brands/<brand-id>/`](./brands/) con sus propios tokens (`colors.json`, `typography.json`, `spacing.json`), contrato visual [`DESIGN.md`](./brands/linear-tech/DESIGN.md) y página dedicada en Paper Canvas.
+- **Idempotencia y Checksums**: Validación mediante SHA-256 (`brand-hasher.ts`) para garantizar que la conmutación de marcas no corrompa estados ni genere mutaciones redundantes.
+- **Marcas Iniciales**:
+  - `linear-tech`: Estética dark mode técnica y alta densidad (Preset Linear).
+  - `lumina-pay`: Pasarela de pagos B2B de alta confianza (Preset Stripe).
+  - `swiss-studio`: Diseño editorial asimétrico de impacto (Preset Swiss).
+
 ## Scripts y Herramientas (PNPM)
 
 ```bash
-pnpm test                  # Ejecuta la suite completa de pruebas evaluadoras
+pnpm test                  # Ejecuta la suite completa de pruebas evaluadoras (7 tests)
+pnpm run test:multibrand   # Valida integridad, hashes e idempotencia del sistema multi-marca
 pnpm run test:typography   # Valida unidades px/em y fuentes autorizadas
 pnpm run test:tokens       # Valida coincidencia con tokens de color
 pnpm run test:overflow     # Detecta desbordes y alturas fijas conflictivas
@@ -53,6 +64,10 @@ pnpm run test:contract     # Valida fidelidad de componentes contra la spec
 pnpm run test:flyer        # Valida jerarquía gráfica y titular display en flyers
 pnpm run test:color        # Valida generación de escalas tonales y contraste WCAG
 pnpm run drift             # Analiza divergencias entre el canvas y la spec activa
+pnpm run brand:list        # Lista las marcas registradas y la activeBrand
+pnpm run brand:switch <id> # Conmuta atómicamente la marca activa y sincroniza tokens
+pnpm run brand:create      # Registra una nueva marca con aislamiento de directorio
+pnpm run brand:validate    # Audita la consistencia de marcas y checksums SHA-256
 pnpm run preset:apply <id> # Aplica un preset de diseño (linear, stripe, vercel, apple, bento, swiss)
 pnpm run color:scale <hex> # Genera una escala tonal 50-950 accesible WCAG
 pnpm run brand:extract     # Extrae identidad visual y paleta desde imagen o URL

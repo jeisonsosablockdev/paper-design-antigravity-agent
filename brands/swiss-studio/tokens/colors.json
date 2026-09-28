@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "colors": {
+    "primary": {
+      "default": "#0A0A0A",
+      "hover": "#262626",
+      "subtle": "#F4F4F4"
+    },
+    "background": {
+      "canvas": "#FFFFFF",
+      "surface": "#F4F4F4",
+      "elevated": "#EBEBEB"
+    },
+    "text": {
+      "primary": "#0A0A0A",
+      "secondary": "#4A4A4A",
+      "muted": "#737373",
+      "inverse": "#FFFFFF"
+    },
+    "border": {
+      "subtle": "#E5E5E5",
+      "default": "#0A0A0A",
+      "strong": "#0A0A0A"
+    },
+    "status": {
+      "success": "#0A0A0A",
+      "warning": "#D90429",
+      "danger": "#D90429",
+      "info": "#0A0A0A"
+    }
+  }
+}

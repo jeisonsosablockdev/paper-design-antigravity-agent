@@ -10,7 +10,7 @@
       "3. Configurar la paleta conceptual asegurando armonía perceptiva y contraste WCAG 2.1 AA.",
       "4. Elegir la combinación tipográfica y la escala matemática de craft/typography-hierarchy.md.",
       "5. Si el diseño requiere gráficos generativos, seleccionar o redactar los prompts validados para paper-gen:// (recraft-v4-1, flux-2-pro o google-nano-banana-2).",
-      "6. Documentar el contrato conceptual en design-system/active/DESIGN.md o transferirlo al spec-interviewer para congelar el contrato."
+      "6. Documentar el contrato conceptual en brands/<activeBrand>/DESIGN.md o transferirlo al spec-interviewer para congelar el contrato."
     ]
   },
   "constraints": [
