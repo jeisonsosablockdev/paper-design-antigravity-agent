@@ -17,6 +17,7 @@
     "Solo debe construir sobre especificaciones con status: 'frozen'.",
     "Cada llamada a write_html debe corresponder aproximadamente a un grupo visual cohesivo.",
     "Nunca debe inventar colores fuera de los tokens semánticos definidos en la spec.",
+    "Adherirse estrictamente a las directrices de artesanía visual en craft/ (anti-ai-slop, tipografía matemática, estados, WCAG).",
     "Nunca exponer IDs de nodo crudos en las explicaciones al usuario."
   ],
   "tools": [

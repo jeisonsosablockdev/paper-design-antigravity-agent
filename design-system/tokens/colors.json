@@ -2,31 +2,31 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "colors": {
     "primary": {
-      "default": "#2563EB",
-      "hover": "#1D4ED8",
-      "subtle": "#EFF6FF"
+      "default": "#5E6AD2",
+      "hover": "#6875E5",
+      "subtle": "rgba(94, 106, 210, 0.15)"
     },
     "background": {
-      "canvas": "#F8FAFC",
-      "surface": "#FFFFFF",
-      "elevated": "#FFFFFF"
+      "canvas": "#08090A",
+      "surface": "#0F1011",
+      "elevated": "#161719"
     },
     "text": {
-      "primary": "#0F172A",
-      "secondary": "#64748B",
-      "muted": "#94A3B8",
-      "inverse": "#FFFFFF"
+      "primary": "#F7F8F8",
+      "secondary": "#8A8F98",
+      "muted": "#62666D",
+      "inverse": "#08090A"
     },
     "border": {
-      "subtle": "#E2E8F0",
-      "default": "#CBD5E1",
-      "strong": "#94A3B8"
+      "subtle": "rgba(255, 255, 255, 0.07)",
+      "default": "rgba(255, 255, 255, 0.12)",
+      "strong": "rgba(255, 255, 255, 0.2)"
     },
     "status": {
-      "success": "#16A34A",
-      "warning": "#F59E0B",
-      "danger": "#DC2626",
-      "info": "#0284C7"
+      "success": "#4CB782",
+      "warning": "#F2994A",
+      "danger": "#EB5757",
+      "info": "#5E6AD2"
     }
   }
 }

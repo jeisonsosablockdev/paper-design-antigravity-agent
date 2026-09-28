@@ -2,32 +2,32 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "typography": {
     "fontFamilies": {
-      "sans": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-      "mono": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+      "sans": "Inter, Geist Sans, -apple-system, sans-serif",
+      "mono": "Geist Mono, ui-monospace, monospace"
     },
     "fontSizes": {
-      "xs": "12px",
-      "sm": "14px",
-      "base": "16px",
-      "lg": "18px",
-      "xl": "20px",
-      "2xl": "24px",
-      "3xl": "30px",
+      "xs": "11px",
+      "sm": "13px",
+      "base": "14px",
+      "lg": "16px",
+      "xl": "18px",
+      "2xl": "22px",
+      "3xl": "28px",
       "4xl": "36px"
     },
     "lineHeights": {
-      "tight": "16px",
-      "snug": "20px",
-      "normal": "24px",
-      "relaxed": "28px",
-      "loose": "32px",
-      "heading": "40px"
+      "tight": "14px",
+      "snug": "18px",
+      "normal": "20px",
+      "relaxed": "24px",
+      "loose": "28px",
+      "heading": "34px"
     },
     "letterSpacing": {
-      "tighter": "-0.05em",
-      "tight": "-0.025em",
-      "normal": "0em",
-      "wide": "0.025em",
+      "tighter": "-0.04em",
+      "tight": "-0.02em",
+      "normal": "-0.005em",
+      "wide": "0.02em",
       "wider": "0.05em"
     }
   }

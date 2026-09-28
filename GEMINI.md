@@ -38,3 +38,11 @@ Siempre que interactúes con diseños en Paper dentro de este proyecto:
      c) Captura la vista visual con `get_screenshot`.
      d) Ejecuta análisis de deriva (*drift*) contra la especificación tipada en `specs/screens/*.spec.ts`.
      e) Presenta un resumen de cambios detectados y consulta si se debe actualizar el contrato de la spec o proceder con el siguiente paso de diseño.
+
+7. **Estándares de Artesanía Visual (Craft Engine)**:
+   - Todo diseño en Paper (`ui-builder`, `flyer-designer`) debe adherirse a los principios en `craft/`:
+     - Erradicar AI-slop (`craft/anti-ai-slop.md`): sin fondos morados genéricos ni gradientes flotantes sin semántica.
+     - Escala tipográfica matemática y espaciado proporcional (`craft/typography-hierarchy.md`).
+     - Accesibilidad básica WCAG AA y tap targets >= 44px (`craft/accessibility-baseline.md`).
+     - Cobertura de estados y ergonomía cognitiva (`craft/state-coverage.md`, `craft/laws-of-ux.md`).
+

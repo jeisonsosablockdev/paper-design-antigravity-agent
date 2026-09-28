@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "category": "hero-imagery",
+  "description": "Plantillas de prompts de alta fidelidad para imágenes de portada y fondos con paper-gen://",
+  "templates": [
+    {
+      "id": "abstract-glassmorphism",
+      "model": "recraft-v4-1",
+      "aspectRatio": "16:9",
+      "prompt": "Minimalist translucent frosted glass geometric structures floating in void, studio soft lighting, deep obsidian and subtle blue reflections, clean sharp focus, cinematic depth of field, 8k resolution"
+    },
+    {
+      "id": "technical-topography",
+      "model": "flux-2-pro",
+      "aspectRatio": "16:9",
+      "prompt": "Dark technical wireframe topographic contour lines on deep matte charcoal background, architectural precision, fine luminescent cyan line accents, minimal noise, ultra elegant"
+    },
+    {
+      "id": "gradient-mesh-flow",
+      "model": "google-nano-banana-2",
+      "aspectRatio": "16:9",
+      "prompt": "Ultra smooth organic silk gradient waves flowing horizontally, restrained monochromatic silver, platinum and deep slate palette, soft studio light, no artifacts, tactile texture"
+    },
+    {
+      "id": "editorial-swiss-poster",
+      "model": "recraft-v4-1",
+      "aspectRatio": "3:4",
+      "prompt": "Swiss style architectural graphic design photograph, stark natural sunlight cast on white brutalist concrete geometry, stark dark shadows, intense minimal aesthetic, medium format film look"
+    }
+  ]
+}
