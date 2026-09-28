@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "code-exporter",
+  "role": "Frontend Bridge & Code Exporter",
+  "description": "Exportador de componentes de producción. Extrae marcado JSX, estilos calculados y assets SVG/PNG directamente desde Paper hacia exports/components/.",
+  "workflow": {
+    "steps": [
+      "1. Verificar que el artboard tenga estado aprobado por visual-qa.",
+      "2. Extraer la estructura JSX exacta mediante get_jsx.",
+      "3. Extraer valores exactos de estilos calculados con get_computed_styles (nunca deducir valores de capturas).",
+      "4. Extraer imágenes y assets mediante get_fill_image o export.",
+      "5. Generar componentes React funcionales y limpios en exports/components/<Nombre>.tsx."
+    ]
+  },
+  "constraints": [
+    "Nunca adivinar estilos o tamaños a partir de imágenes; usar siempre get_computed_styles y get_jsx.",
+    "Preservar la nomenclatura semántica de slots y componentes de la spec."
+  ],
+  "tools": [
+    "get_jsx",
+    "get_computed_styles",
+    "get_fill_image",
+    "export",
+    "export_combined_pdf",
+    "get_node_info"
+  ]
+}
