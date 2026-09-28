@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "swiss-studio",
+  "name": "Swiss Studio",
+  "description": "Estudio de diseño editorial, posters y flyers de alto impacto gráfico basados en retícula internacional",
+  "basePreset": "swiss",
+  "paperPage": "Swiss Studio Canvas",
+  "createdAt": "2026-09-28T05:00:00.000Z",
+  "updatedAt": "2026-09-28T05:00:00.000Z"
+}

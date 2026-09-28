@@ -154,7 +154,6 @@ export function applyPreset(presetKey: string) {
   const workspaceRoot = process.cwd();
   const colorsPath = path.join(workspaceRoot, "design-system/tokens/colors.json");
   const typographyPath = path.join(workspaceRoot, "design-system/tokens/typography.json");
-  const activeDesignPath = path.join(workspaceRoot, "design-system/active/DESIGN.md");
 
   // 1. Escribir colors.json
   const colorsContent = {
@@ -170,33 +169,9 @@ export function applyPreset(presetKey: string) {
   };
   fs.writeFileSync(typographyPath, JSON.stringify(typographyContent, null, 2) + "\n");
 
-  // 3. Escribir DESIGN.md activo
-  const activeDoc = `# Sistema de Diseño Activo: ${preset.name}
-
-${preset.description}
-
----
-
-## 1. Configuración de Tokens
-- **Preset Clave**: \`${key}\`
-- **Fuente Sans**: \`${preset.typography.fontFamilies.sans}\`
-- **Fuente Mono**: \`${preset.typography.fontFamilies.mono}\`
-- **Fondo Canvas**: \`${preset.colors.background.canvas}\`
-- **Fondo Superficie**: \`${preset.colors.background.surface}\`
-- **Acento Primario**: \`${preset.colors.primary.default}\`
-- **Texto Principal**: \`${preset.colors.text.primary}\`
-
----
-
-## 2. Próximo Paso
-Para aplicar estos tokens en tu canvas de Paper, ejecuta el workflow \`/sync-tokens\` o la herramienta Paper MCP \`set_tokens\`.
-`;
-  fs.writeFileSync(activeDesignPath, activeDoc);
-
   console.log(`\x1b[32m[PRESET APLICADO]\x1b[0m "${preset.name}" configurado exitosamente.`);
   console.log(`- design-system/tokens/colors.json actualizado.`);
   console.log(`- design-system/tokens/typography.json actualizado.`);
-  console.log(`- design-system/active/DESIGN.md sincronizado.`);
 }
 
 // Ejecución directa por CLI si se invoca con argumentos

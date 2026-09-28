@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "lumina-pay",
+  "name": "Lumina Pay",
+  "description": "Pasarela de pagos transfronterizos B2B de alta conversión, confianza e interfaz limpia",
+  "basePreset": "stripe",
+  "paperPage": "Lumina Pay Canvas",
+  "createdAt": "2026-09-28T05:00:00.000Z",
+  "updatedAt": "2026-09-28T05:00:00.000Z"
+}

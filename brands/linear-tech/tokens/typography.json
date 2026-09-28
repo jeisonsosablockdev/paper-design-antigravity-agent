@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "typography": {
+    "fontFamilies": {
+      "sans": "Inter, Geist Sans, -apple-system, sans-serif",
+      "mono": "Geist Mono, ui-monospace, monospace"
+    },
+    "fontSizes": {
+      "xs": "11px",
+      "sm": "13px",
+      "base": "14px",
+      "lg": "16px",
+      "xl": "18px",
+      "2xl": "22px",
+      "3xl": "28px",
+      "4xl": "36px"
+    },
+    "lineHeights": {
+      "tight": "14px",
+      "snug": "18px",
+      "normal": "20px",
+      "relaxed": "24px",
+      "loose": "28px",
+      "heading": "34px"
+    },
+    "letterSpacing": {
+      "tighter": "-0.04em",
+      "tight": "-0.02em",
+      "normal": "-0.005em",
+      "wide": "0.02em",
+      "wider": "0.05em"
+    }
+  }
+}

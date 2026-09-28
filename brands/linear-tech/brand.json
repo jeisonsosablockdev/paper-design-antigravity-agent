@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "linear-tech",
+  "name": "Linear Tech",
+  "description": "Herramienta de desarrollo y seguimiento de proyectos con estética técnica dark mode",
+  "basePreset": "linear",
+  "paperPage": "Linear Tech Canvas",
+  "createdAt": "2026-09-28T05:00:00.000Z",
+  "updatedAt": "2026-09-28T05:00:00.000Z"
+}
