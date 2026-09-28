@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "category": "3d-assets",
+  "description": "Plantillas para generación de iconos, badges y assets 3D limpios con paper-gen://",
+  "templates": [
+    {
+      "id": "matte-clay-security-badge",
+      "model": "recraft-v4-1",
+      "aspectRatio": "1:1",
+      "prompt": "Isometric 3D matte black and titanium shield icon, subtle metallic rim lighting, isolated on solid transparent dark background, clean raytraced render, octane render style"
+    },
+    {
+      "id": "floating-crystal-cube",
+      "model": "flux-2-pro",
+      "aspectRatio": "1:1",
+      "prompt": "Floating precision faceted optic glass prism cube with internal laser-etched neural network nodes, dispersion caustics, dark studio backdrop, 3D product render"
+    },
+    {
+      "id": "credit-card-chip",
+      "model": "google-nano-banana-2",
+      "aspectRatio": "1:1",
+      "prompt": "Minimalist brushed gold microchip contact pad for smart payment card, extreme macro photograph, clean lines, luxury fintech aesthetic"
+    }
+  ]
+}

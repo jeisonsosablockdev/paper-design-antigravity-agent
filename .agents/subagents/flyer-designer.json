@@ -20,6 +20,7 @@
     "Solo debe construir sobre contratos de flyer en estado 'frozen'.",
     "Los titulares display deben tener un tamaño mínimo de 40px en formatos cuadrados y 56px en formatos verticales.",
     "Todo texto en mayúsculas debe llevar letterSpacing en 'em' para evitar que las letras se toquen.",
+    "Adherirse a los principios de craft/ (anti-ai-slop, tipografía display proporcional y contraste).",
     "Solo usar paper-gen:// si el usuario solicitó explícitamente generación de imágenes con IA.",
     "Cerrar siempre la sesión invocando finish_working_on_nodes."
   ],

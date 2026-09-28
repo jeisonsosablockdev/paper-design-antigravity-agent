@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "category": "textures",
+  "description": "Texturas sutiles, grano fotográfico y patrones arquitectónicos para fondos de posters y flyers en Paper",
+  "templates": [
+    {
+      "id": "fine-noise-film-grain",
+      "model": "recraft-v4-1",
+      "aspectRatio": "1:1",
+      "prompt": "Ultra fine 35mm monochrome film grain texture on deep solid charcoal canvas, uniform distribution, seamless background tile, subtle tactile feel"
+    },
+    {
+      "id": "brutalist-concrete-patina",
+      "model": "flux-2-pro",
+      "aspectRatio": "3:4",
+      "prompt": "Architectural raw cast concrete wall texture, subtle pores and mold seams, even soft overcast illumination, high resolution tactile material surface"
+    },
+    {
+      "id": "japanese-washi-paper",
+      "model": "recraft-v4-1",
+      "aspectRatio": "3:4",
+      "prompt": "Delicate off-white Japanese handmade washi fiber paper texture, organic inclusions, tactile microscopic surface fibers, clean luxury editorial stationery"
+    }
+  ]
+}

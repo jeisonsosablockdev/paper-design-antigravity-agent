@@ -16,21 +16,48 @@ Workspace local para diseño de interfaces digitales conectado directamente a **
   Inspecciona el lienzo de Paper, detecta cambios manuales del usuario, audita la selección activa, genera un análisis de deriva (*drift*) contra `specs/screens/*.spec.ts` y sincroniza el estado.
 - **`/create-screen`** ([`.agents/skills/create-screen/SKILL.md`](./.agents/skills/create-screen/SKILL.md)):
   Pipeline completo: Entrevista Draft-First $\to$ Contrato TypeScript Congelado $\to$ Renderizado en Paper $\to$ QA Visual.
+- **`/color-expert`** ([`.agents/skills/color-expert/SKILL.md`](./.agents/skills/color-expert/SKILL.md)):
+  Genera escalas tonales (50-950) accesibles WCAG AA/AAA y sincroniza paletas con tokens de diseño.
+- **`/brand-extract`** ([`.agents/skills/brand-extract/SKILL.md`](./.agents/skills/brand-extract/SKILL.md)):
+  Extrae y sintetiza identidad visual, paleta cromática y tipografía a partir de URLs o imágenes.
 - **`/sync-tokens`** ([`.agents/skills/sync-tokens/SKILL.md`](./.agents/skills/sync-tokens/SKILL.md)):
   Sincronización bidireccional entre `design-system/tokens/` y las variables de Paper.
 - **`/audit-screen`** ([`.agents/skills/audit-screen/SKILL.md`](./.agents/skills/audit-screen/SKILL.md)):
   Auditoría visual de contraste WCAG, clipping y reglas tipográficas.
 
-## Scripts de Validación (PNPM)
+## Craft Engine & Estándares OpenDesign
+
+El sistema incorpora los principios de diseño de alta artesanía ubicados en [`craft/`](./craft/):
+- **Anti AI-Slop** ([`craft/anti-ai-slop.md`](./craft/anti-ai-slop.md)): Erradica gradientes morados genéricos y fondos sin intención de marca.
+- **Jerarquía Tipográfica** ([`craft/typography-hierarchy.md`](./craft/typography-hierarchy.md)): Escalas proporcionales y métricas matemáticas en `px`/`em`.
+- **Accesibilidad WCAG AA** ([`craft/accessibility-baseline.md`](./craft/accessibility-baseline.md)): Contraste mínimo 4.5:1 y tap targets $\ge 44\text{px}$.
+- **Cobertura de Estados** ([`craft/state-coverage.md`](./craft/state-coverage.md)) y **Leyes de UX** ([`craft/laws-of-ux.md`](./craft/laws-of-ux.md)).
+
+### Presets de Diseño OpenDesign (`design-system/presets/`)
+Sistemas visuales completos intercambiables (`pnpm run preset:apply <nombre>`):
+- **Linear**: Modo oscuro profundo, densidad técnica, bordes sutiles y acento violeta eléctrico.
+- **Stripe**: Fondos claros, elevaciones multicapa y acento índigo de alta conversión.
+- **Vercel**: Monocromático de alta fidelidad, contraste extremo y estética Geist.
+- **Apple**: Vidrio translúcido, bordes de 0.5px y tipografía humana SF Pro.
+- **Bento**: Grillas modulares de contenido, tarjetas redondeadas y micro-etiquetas.
+- **Swiss**: Tipografía protagonista, asimetría estructurada y acento rojo internacional.
+
+## Scripts y Herramientas (PNPM)
 
 ```bash
+pnpm test                  # Ejecuta la suite completa de pruebas evaluadoras
 pnpm run test:typography   # Valida unidades px/em y fuentes autorizadas
 pnpm run test:tokens       # Valida coincidencia con tokens de color
 pnpm run test:overflow     # Detecta desbordes y alturas fijas conflictivas
 pnpm run test:contract     # Valida fidelidad de componentes contra la spec
 pnpm run test:flyer        # Valida jerarquía gráfica y titular display en flyers
+pnpm run test:color        # Valida generación de escalas tonales y contraste WCAG
 pnpm run drift             # Analiza divergencias entre el canvas y la spec activa
+pnpm run preset:apply <id> # Aplica un preset de diseño (linear, stripe, vercel, apple, bento, swiss)
+pnpm run color:scale <hex> # Genera una escala tonal 50-950 accesible WCAG
+pnpm run brand:extract     # Extrae identidad visual y paleta desde imagen o URL
 ```
+
 
 ## Herramientas MCP Principales
 

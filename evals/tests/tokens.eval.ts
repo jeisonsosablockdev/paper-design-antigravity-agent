@@ -49,6 +49,18 @@ export function evaluateTokenAdherence(
 }
 
 // Ejecución directa de prueba de humo
-const sampleColors = ["#2563EB", "#FFFFFF", "#0F172A"];
+const tokensData = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), "design-system/tokens/colors.json"), "utf-8"));
+const sampleColors: string[] = [];
+function findSamples(obj: Record<string, unknown>) {
+  for (const val of Object.values(obj)) {
+    if (typeof val === "string" && val.startsWith("#") && sampleColors.length < 3) {
+      sampleColors.push(val);
+    } else if (typeof val === "object" && val !== null && sampleColors.length < 3) {
+      findSamples(val as Record<string, unknown>);
+    }
+  }
+}
+findSamples(tokensData.colors);
 const result = evaluateTokenAdherence(sampleColors);
 console.log(`[Token Eval Test] Pasó: ${result.passed}, Score: ${result.score}/10`);
+
