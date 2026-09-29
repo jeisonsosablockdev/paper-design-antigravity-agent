@@ -1,0 +1,8 @@
+{
+  "id": "shadcn",
+  "name": "Shadcn Neutral Craft",
+  "category": "system",
+  "urn": "od:sys/shadcn",
+  "description": "Diseño minimalista zinc/neutral, bordes nítidos de 1px, badges compactos y accesibilidad nativa Radix.",
+  "sourceUrl": "https://github.com/nexu-io/open-design/tree/main/design-systems/shadcn"
+}

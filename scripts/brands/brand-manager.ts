@@ -339,7 +339,8 @@ if (process.argv[1]?.endsWith("brand-manager.ts")) {
         console.error("\x1b[31m[ERROR]\x1b[0m Debes especificar el ID de la marca. Ej: pnpm run brand:switch lumina-pay");
         process.exit(1);
       }
-      const result = manager.switchBrand(brandId);
+      const force = process.argv.includes("--force");
+      const result = manager.switchBrand(brandId, { force });
       if (result.noop) {
         console.log(`\x1b[33m[NO-OP IDEMPOTENTE]\x1b[0m La marca '${brandId}' ya está activa y su hash es idéntico. Cero reescrituras.`);
       } else {

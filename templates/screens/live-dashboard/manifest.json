@@ -1,0 +1,8 @@
+{
+  "id": "live-dashboard",
+  "name": "Live Operations Dashboard",
+  "category": "screen",
+  "urn": "od:screen/live-dashboard",
+  "description": "Tablero de métricas en tiempo real con tarjetas de KPI, gráficos de tendencia, estado de servidores y lista de eventos.",
+  "sourceUrl": "https://github.com/nexu-io/open-design/tree/main/design-templates/live-dashboard"
+}

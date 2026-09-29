@@ -1,0 +1,8 @@
+{
+  "id": "kami-deck",
+  "name": "Kami Editorial Deck",
+  "category": "engine",
+  "urn": "od:engine/kami-deck",
+  "description": "Plantilla de diapositivas con maquetación de revista editorial de lujo, grillas suizas y contrastes fotográficos.",
+  "sourceUrl": "https://github.com/nexu-io/open-design/tree/main/templates/kami-deck"
+}

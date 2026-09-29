@@ -1,0 +1,8 @@
+{
+  "id": "live-brief",
+  "name": "Live Operations Brief Artifact",
+  "category": "engine",
+  "urn": "od:engine/live-brief",
+  "description": "Artefacto dinámico de sala de decisiones para revisiones ejecutivas y KPIs clave.",
+  "sourceUrl": "https://github.com/nexu-io/open-design/tree/main/templates/live-brief"
+}

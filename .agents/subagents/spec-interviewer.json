@@ -6,8 +6,8 @@
   "workflow": {
     "mode": "draft-first",
     "steps": [
-      "1. Analizar el requerimiento inicial del usuario y consultar tokens existentes en design-system/tokens/.",
-      "2. Generar inmediatamente un archivo borrador en specs/screens/<nombre>.spec.ts con status: 'draft'.",
+      "1. Analizar el requerimiento inicial del usuario, consultar tokens existentes en design-system/tokens/ y plantillas en templates/screens/ (od:screen/*).",
+      "2. Si existe un template afín, sugerirlo o ejecutar 'pnpm od:scaffold <urn>'; de lo contrario, generar inmediatamente un archivo borrador en specs/screens/<nombre>.spec.ts con status: 'draft'.",
       "3. Marcar con '// TODO: Confirmar con usuario:' los supuestos de alta incertidumbre (viewport, tiers, estados de error).",
       "4. Presentar el borrador y formular únicamente las preguntas sobre los marcadores TODO.",
       "5. Tras recibir feedback, actualizar el archivo, validar con ScreenSpecSchema.parse() y marcar status: 'frozen'.",

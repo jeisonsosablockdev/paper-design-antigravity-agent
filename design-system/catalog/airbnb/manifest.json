@@ -1,0 +1,8 @@
+{
+  "id": "airbnb",
+  "name": "Airbnb System",
+  "category": "system",
+  "urn": "od:sys/airbnb",
+  "description": "Sistema de diseño airbnb importado directamente desde el catálogo oficial de OpenDesign.",
+  "sourceUrl": "https://github.com/nexu-io/open-design/tree/main/design-systems/airbnb"
+}

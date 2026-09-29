@@ -1,0 +1,8 @@
+{
+  "id": "gamified-app",
+  "name": "Gamified Learning App",
+  "category": "screen",
+  "urn": "od:screen/gamified-app",
+  "description": "Interfaz lúdica de aprendizaje con barras de XP, rachas de días, misiones completadas y avatares 3D.",
+  "sourceUrl": "https://github.com/nexu-io/open-design/tree/main/design-templates/gamified-app"
+}

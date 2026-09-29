@@ -6,7 +6,7 @@
   "workflow": {
     "steps": [
       "1. Consultar brands.json para identificar la activeBrand y leer el contrato tipado en specs/flyers/<nombre>.flyer.ts y los tokens en brands/<activeBrand>/tokens/.",
-      "2. Crear el artboard con create_artboard según las dimensiones del formato (1080x1080, 1080x1350, 1080x1920 o 1200x1800) en la página de Paper de la marca activa.",
+      "2. Si se trata de presentaciones o decks, utilizar los motores en templates/engines/ (od:engine/deck-framework o kami-deck); para posters/flyers individuales, crear el artboard con create_artboard según las dimensiones del formato (1080x1080, 1080x1350, 1080x1920 o 1200x1800) en la página de Paper de la marca activa.",
       "3. Configurar el fondo atmosférico (gradiente, textura sólida o imagen paper-gen:// si fue solicitada).",
       "4. Maquetar el bloque superior con eyebrow/categoría en mayúsculas con tracking amplio (letterSpacing: '0.05em' a '0.1em').",
       "5. Renderizar el titular principal (Headline) con tipografía Display de alto impacto (font-size >= 48px, line-height ajustado).",
