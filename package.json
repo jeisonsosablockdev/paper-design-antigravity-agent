@@ -6,7 +6,7 @@
   "packageManager": "pnpm@10.33.2",
   "scripts": {
     "preinstall": "node -e \"if (!process.env.npm_config_user_agent?.includes('pnpm')) { console.error('\\n\\x1b[31m[ERROR]\\x1b[0m Este proyecto usa pnpm exclusivamente. Ejecuta: pnpm install\\n'); process.exit(1); }\"",
-    "test": "node evals/tests/contract.eval.ts && node evals/tests/typography.eval.ts && node evals/tests/tokens.eval.ts && node evals/tests/overflow.eval.ts && node evals/tests/flyer-hierarchy.eval.ts && node evals/tests/color-expert.eval.ts && node evals/tests/multi-brand.eval.ts",
+    "test": "node evals/tests/contract.eval.ts && node evals/tests/typography.eval.ts && node evals/tests/tokens.eval.ts && node evals/tests/overflow.eval.ts && node evals/tests/flyer-hierarchy.eval.ts && node evals/tests/color-expert.eval.ts && node evals/tests/multi-brand.eval.ts && node evals/tests/opendesign.eval.ts",
     "test:typography": "node evals/tests/typography.eval.ts",
     "test:tokens": "node evals/tests/tokens.eval.ts",
     "test:overflow": "node evals/tests/overflow.eval.ts",
@@ -14,6 +14,7 @@
     "test:flyer": "node evals/tests/flyer-hierarchy.eval.ts",
     "test:color": "node evals/tests/color-expert.eval.ts",
     "test:multibrand": "node evals/tests/multi-brand.eval.ts",
+    "test:opendesign": "node evals/tests/opendesign.eval.ts",
     "brand:list": "node scripts/brands/brand-manager.ts list",
     "brand:switch": "node scripts/brands/brand-manager.ts switch",
     "brand:create": "node scripts/brands/brand-manager.ts create",
@@ -21,7 +22,12 @@
     "preset:apply": "node scripts/apply-preset.ts",
     "color:scale": "node scripts/color-expert.ts",
     "brand:extract": "node scripts/brand-extract.ts",
-    "drift": "node specs/drift/drift-detector.ts"
+    "drift": "node specs/drift/drift-detector.ts",
+    "od:list": "node scripts/opendesign/od-manager.ts list",
+    "od:apply": "node scripts/opendesign/od-manager.ts apply",
+    "od:scaffold": "node scripts/opendesign/od-manager.ts scaffold",
+    "od:brand": "node scripts/opendesign/od-manager.ts brand",
+    "od:import": "node scripts/opendesign/ingest-catalog.ts"
   },
   "keywords": [
     "paper",

@@ -6,7 +6,7 @@
   "workflow": {
     "steps": [
       "1. Analizar el brief del usuario o problema de producto a resolver.",
-      "2. Determinar el arquetipo visual idóneo desde design-system/presets/ (Linear, Stripe, Apple, Swiss, Vercel, Bento) o sintetizar uno nuevo.",
+      "2. Determinar el arquetipo visual idóneo desde design-system/presets/ (Linear, Stripe, Apple, Swiss, Vercel, Bento), el catálogo de sistemas en design-system/catalog/ (od:sys/*) o sintetizar uno nuevo.",
       "3. Configurar la paleta conceptual asegurando armonía perceptiva y contraste WCAG 2.1 AA.",
       "4. Elegir la combinación tipográfica y la escala matemática de craft/typography-hierarchy.md.",
       "5. Si el diseño requiere gráficos generativos, seleccionar o redactar los prompts validados para paper-gen:// (recraft-v4-1, flux-2-pro o google-nano-banana-2).",

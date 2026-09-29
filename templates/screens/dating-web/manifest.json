@@ -1,0 +1,8 @@
+{
+  "id": "dating-web",
+  "name": "Dating Web Experience",
+  "category": "screen",
+  "urn": "od:screen/dating-web",
+  "description": "Layout editorial de citas con scroll horizontal, perfiles ricos, badges de compatibilidad e interacción táctil.",
+  "sourceUrl": "https://github.com/nexu-io/open-design/tree/main/design-templates/dating-web"
+}

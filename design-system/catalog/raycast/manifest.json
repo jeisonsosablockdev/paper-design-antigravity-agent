@@ -1,0 +1,8 @@
+{
+  "id": "raycast",
+  "name": "Raycast Command Palette",
+  "category": "system",
+  "urn": "od:sys/raycast",
+  "description": "Paleta ultra rápida, fondos carbón, acento carmesí neón y atajos de teclado visuales.",
+  "sourceUrl": "https://github.com/nexu-io/open-design/tree/main/design-systems/raycast"
+}

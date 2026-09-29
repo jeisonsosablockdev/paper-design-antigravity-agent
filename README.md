@@ -55,7 +55,8 @@ El workspace soporta gestión concurrente y conmutación atómica de marcas medi
 ## Scripts y Herramientas (PNPM)
 
 ```bash
-pnpm test                  # Ejecuta la suite completa de pruebas evaluadoras (7 tests)
+pnpm test                  # Ejecuta la suite completa de pruebas evaluadoras (8 tests)
+pnpm run test:opendesign   # Valida normalización de tokens, sanitizador HTML y catálogo OpenDesign
 pnpm run test:multibrand   # Valida integridad, hashes e idempotencia del sistema multi-marca
 pnpm run test:typography   # Valida unidades px/em y fuentes autorizadas
 pnpm run test:tokens       # Valida coincidencia con tokens de color
@@ -71,6 +72,13 @@ pnpm run brand:validate    # Audita la consistencia de marcas y checksums SHA-25
 pnpm run preset:apply <id> # Aplica un preset de diseño (linear, stripe, vercel, apple, bento, swiss)
 pnpm run color:scale <hex> # Genera una escala tonal 50-950 accesible WCAG
 pnpm run brand:extract     # Extrae identidad visual y paleta desde imagen o URL
+
+# Catálogo OpenDesign (od:sys/*, od:screen/*, od:engine/*)
+pnpm run od:list           # Lista sistemas, plantillas y motores disponibles en el catálogo
+pnpm run od:apply <urn>    # Aplica un sistema OpenDesign (ej. od:sys/supabase) al lienzo activo
+pnpm run od:scaffold <urn> # Scaffoldea una spec tipada a partir de un template (ej. od:screen/dating-web)
+pnpm run od:brand <urn>    # Convierte un sistema OpenDesign en una marca registrada formal en brands/
+pnpm run od:import         # Importa o descarga dinámicamente sistemas (--system=<id>, --template=<id>)
 ```
 
 

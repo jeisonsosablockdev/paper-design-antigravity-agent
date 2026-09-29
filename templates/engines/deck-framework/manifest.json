@@ -1,0 +1,8 @@
+{
+  "id": "deck-framework",
+  "name": "Presentation Deck Framework",
+  "category": "engine",
+  "urn": "od:engine/deck-framework",
+  "description": "Framework base para presentaciones de diapositivas en formato 16:9 con soporte para miniaturas y notas.",
+  "sourceUrl": "https://github.com/nexu-io/open-design/tree/main/templates/deck-framework"
+}

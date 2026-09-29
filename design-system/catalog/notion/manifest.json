@@ -1,0 +1,8 @@
+{
+  "id": "notion",
+  "name": "Notion Editorial System",
+  "category": "system",
+  "urn": "od:sys/notion",
+  "description": "Estética documental clara, paleta cálida, bordes ultra sutiles y enfoque en legibilidad de texto largo.",
+  "sourceUrl": "https://github.com/nexu-io/open-design/tree/main/design-systems/notion"
+}

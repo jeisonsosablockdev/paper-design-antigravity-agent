@@ -1,0 +1,8 @@
+{
+  "id": "supabase",
+  "name": "Supabase Design System",
+  "category": "system",
+  "urn": "od:sys/supabase",
+  "description": "Estética técnica developer-first, fondo obsidian profundo, acento verde esmeralda y alto contraste de código.",
+  "sourceUrl": "https://github.com/nexu-io/open-design/tree/main/design-systems/supabase"
+}

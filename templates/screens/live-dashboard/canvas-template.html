@@ -1,0 +1,37 @@
+<div class="dashboard-wrapper" style="display: flex; width: 1440px; min-height: fit-content; background: #0B0F17; color: #E2E8F0; font-family: Inter, sans-serif;">
+  <aside style="width: 240px; border-right: 1px solid #1E293B; padding: 24px; display: flex; flex-direction: column; gap: 20px;">
+    <h2 style="font-size: 18px; font-weight: 700; color: #38BDF8; margin: 0;">PulseOps</h2>
+    <nav style="display: flex; flex-direction: column; gap: 8px;">
+      <a href="#" style="color: #F8FAFC; text-decoration: none; padding: 8px 12px; background: #1E293B; border-radius: 8px; font-size: 14px;">Métricas</a>
+      <a href="#" style="color: #94A3B8; text-decoration: none; padding: 8px 12px; border-radius: 8px; font-size: 14px;">Servidores</a>
+      <a href="#" style="color: #94A3B8; text-decoration: none; padding: 8px 12px; border-radius: 8px; font-size: 14px;">Incidentes</a>
+    </nav>
+  </aside>
+  <main style="flex: 1; padding: 32px; display: flex; flex-direction: column; gap: 24px;">
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <h1 style="font-size: 24px; font-weight: 700; margin: 0;">Centro de Operaciones</h1>
+        <p style="color: #64748B; margin: 4px 0 0; font-size: 14px;">Telemetría en vivo del clúster de producción</p>
+      </div>
+      <button  style="flex-shrink: 0; height: 40px; padding: 0 16px; background: #0284C7; color: #FFFFFF; border: none; border-radius: 8px; font-weight: 600;">Descargar Reporte</button>
+    </header>
+    <div class="kpi-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+      <div class="card" style="background: #111827; border: 1px solid #1F2937; border-radius: 12px; padding: 18px;">
+        <span style="font-size: 12px; color: #9CA3AF;">Tiempo de Respuesta</span>
+        <div style="font-size: 24px; font-weight: 700; margin-top: 6px; font-family: monospace;">42ms</div>
+      </div>
+      <div class="card" style="background: #111827; border: 1px solid #1F2937; border-radius: 12px; padding: 18px;">
+        <span style="font-size: 12px; color: #9CA3AF;">Uptime Mensual</span>
+        <div style="font-size: 24px; font-weight: 700; margin-top: 6px; font-family: monospace; color: #10B981;">99.98%</div>
+      </div>
+      <div class="card" style="background: #111827; border: 1px solid #1F2937; border-radius: 12px; padding: 18px;">
+        <span style="font-size: 12px; color: #9CA3AF;">Peticiones / seg</span>
+        <div style="font-size: 24px; font-weight: 700; margin-top: 6px; font-family: monospace;">18.4K</div>
+      </div>
+      <div class="card" style="background: #111827; border: 1px solid #1F2937; border-radius: 12px; padding: 18px;">
+        <span style="font-size: 12px; color: #9CA3AF;">Tasa de Error</span>
+        <div style="font-size: 24px; font-weight: 700; margin-top: 6px; font-family: monospace; color: #F59E0B;">0.012%</div>
+      </div>
+    </div>
+  </main>
+</div>
