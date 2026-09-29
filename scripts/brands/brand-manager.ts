@@ -23,6 +23,8 @@ export interface BrandPaths {
   dir: string;
   meta: string;
   design: string;
+  inbox: string;
+  assets: string;
   tokens: {
     colors: string;
     typography: string;
@@ -59,12 +61,21 @@ export class BrandManager {
       dir: brandDir,
       meta: path.join(brandDir, "brand.json"),
       design: path.join(brandDir, "DESIGN.md"),
+      inbox: path.join(brandDir, "inbox"),
+      assets: path.join(brandDir, "assets"),
       tokens: {
         colors: path.join(brandDir, "tokens", "colors.json"),
         typography: path.join(brandDir, "tokens", "typography.json"),
         spacing: path.join(brandDir, "tokens", "spacing.json")
       }
     };
+  }
+
+  // Lista los archivos pendientes de digestión en el inbox de una marca
+  public getInboxFiles(brandId: string): string[] {
+    const paths = this.getBrandPaths(brandId);
+    if (!fs.existsSync(paths.inbox)) return [];
+    return fs.readdirSync(paths.inbox).filter(f => f !== ".gitkeep" && f !== "README.md" && !f.startsWith("."));
   }
 
   // Obtiene los metadatos de la marca activa
@@ -163,9 +174,18 @@ export class BrandManager {
       throw new Error(`El directorio brands/${id} ya existe en disco.`);
     }
 
-    // Crear directorios
+    // Crear directorios de marca
     fs.mkdirSync(path.join(paths.dir, "tokens"), { recursive: true });
-    fs.mkdirSync(path.join(paths.dir, "assets"), { recursive: true });
+    fs.mkdirSync(path.join(paths.dir, "assets", "logos"), { recursive: true });
+    fs.mkdirSync(path.join(paths.dir, "assets", "images"), { recursive: true });
+    fs.mkdirSync(path.join(paths.dir, "inbox"), { recursive: true });
+    fs.writeFileSync(path.join(paths.dir, "inbox", ".gitkeep"), "");
+    fs.writeFileSync(path.join(paths.dir, "assets", "logos", ".gitkeep"), "");
+    fs.writeFileSync(path.join(paths.dir, "assets", "images", ".gitkeep"), "");
+    fs.writeFileSync(
+      path.join(paths.dir, "inbox", "README.md"),
+      `# Brand Inbox: ${name}\n\nZona de entrada (*dropzone*) para soltar hojas de estilo (.css, .scss), tokens (.json), logos (.svg), manuales (.md, .txt) o imágenes de referencia.\n\nEjecuta \`pnpm run brand:digest ${id}\` para procesar y asimilar los archivos automáticamente.\n`
+    );
 
     // Cargar tokens base de un preset existente o defaults
     const presetTokens = this.resolvePresetTokens(basePreset);

@@ -5,7 +5,7 @@
   "description": "Director de arte estratégico. Define el concepto visual, el arquetipo estético (Linear, Stripe, Apple, Swiss, Vercel, Bento), la atmósfera luminosa, el moodboard tipográfico y los prompts para paper-gen:// antes de la maquetación en Paper.",
   "workflow": {
     "steps": [
-      "1. Analizar el brief del usuario o problema de producto a resolver.",
+      "1. Analizar el brief del usuario y verificar si existen activos o referencias depositadas en el buzón brands/<activeBrand>/inbox/ para procesar con el motor de digestión (pnpm run brand:digest).",
       "2. Determinar el arquetipo visual idóneo desde design-system/presets/ (Linear, Stripe, Apple, Swiss, Vercel, Bento), el catálogo de sistemas en design-system/catalog/ (od:sys/*) o sintetizar uno nuevo.",
       "3. Configurar la paleta conceptual asegurando armonía perceptiva y contraste WCAG 2.1 AA.",
       "4. Elegir la combinación tipográfica y la escala matemática de craft/typography-hierarchy.md.",

@@ -6,7 +6,7 @@
   "workflow": {
     "mode": "draft-first",
     "steps": [
-      "1. Analizar el requerimiento inicial del usuario, consultar tokens existentes en design-system/tokens/ y plantillas en templates/screens/ (od:screen/*).",
+      "1. Analizar el requerimiento inicial del usuario, consultar si depositó archivos en brands/<activeBrand>/inbox/, revisar tokens existentes en brands/<activeBrand>/tokens/ y plantillas afines en templates/screens/ (od:screen/*).",
       "2. Si existe un template afín, sugerirlo o ejecutar 'pnpm od:scaffold <urn>'; de lo contrario, generar inmediatamente un archivo borrador en specs/screens/<nombre>.spec.ts con status: 'draft'.",
       "3. Marcar con '// TODO: Confirmar con usuario:' los supuestos de alta incertidumbre (viewport, tiers, estados de error).",
       "4. Presentar el borrador y formular únicamente las preguntas sobre los marcadores TODO.",

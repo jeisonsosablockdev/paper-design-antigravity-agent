@@ -46,3 +46,8 @@ Siempre que interactúes con diseños en Paper dentro de este proyecto:
      - Accesibilidad básica WCAG AA y tap targets >= 44px (`craft/accessibility-baseline.md`).
      - Cobertura de estados y ergonomía cognitiva (`craft/state-coverage.md`, `craft/laws-of-ux.md`).
 
+8. **Buzón de Entrada y Digestión de Marcas (Brand Inbox & Digestion)**:
+   - Toda marca registrada dispone de un directorio `brands/<brand-id>/inbox/` como zona de entrada (*dropzone*) estandarizada.
+   - Cuando el usuario mencione haber dejado archivos o solicite asimilar recursos (CSS, JSON, SVG, PNG, MD), el agente debe inspeccionar el buzón de la marca activa (`brands/<activeBrand>/inbox/`) y activar el pipeline de digestión (`pnpm run brand:digest`).
+   - Los activos se archivan en `brands/<brand-id>/assets/`, actualizando los tokens y recalculando el `stateHash` de integridad.
+
