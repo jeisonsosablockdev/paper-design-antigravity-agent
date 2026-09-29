@@ -46,6 +46,7 @@ Sistemas visuales completos intercambiables (`pnpm run preset:apply <nombre>`):
 
 El workspace soporta gestión concurrente y conmutación atómica de marcas mediante [`brands.json`](./brands.json) y el gestor [`scripts/brands/brand-manager.ts`](./scripts/brands/brand-manager.ts):
 - **Aislamiento Total**: Cada marca reside en [`brands/<brand-id>/`](./brands/) con sus propios tokens (`colors.json`, `typography.json`, `spacing.json`), contrato visual [`DESIGN.md`](./brands/linear-tech/DESIGN.md) y página dedicada en Paper Canvas.
+- **Buzón de Entrada (*Dropzone Inbox*)**: Toda marca cuenta con [`brands/<brand-id>/inbox/`](./brands/linear-tech/inbox/) para soltar archivos (hojas de estilo `.css`, `.json`, logos `.svg`, manuales `.md` o imágenes). El motor de digestión los asimila automáticamente (`pnpm run brand:digest`) y archiva en `assets/`.
 - **Idempotencia y Checksums**: Validación mediante SHA-256 (`brand-hasher.ts`) para garantizar que la conmutación de marcas no corrompa estados ni genere mutaciones redundantes.
 - **Marcas Iniciales**:
   - `linear-tech`: Estética dark mode técnica y alta densidad (Preset Linear).
@@ -55,7 +56,8 @@ El workspace soporta gestión concurrente y conmutación atómica de marcas medi
 ## Scripts y Herramientas (PNPM)
 
 ```bash
-pnpm test                  # Ejecuta la suite completa de pruebas evaluadoras (8 tests)
+pnpm test                  # Ejecuta la suite completa de pruebas evaluadoras (9 tests)
+pnpm run test:digest       # Valida el motor de digestión y buzón de entrada de marca
 pnpm run test:opendesign   # Valida normalización de tokens, sanitizador HTML y catálogo OpenDesign
 pnpm run test:multibrand   # Valida integridad, hashes e idempotencia del sistema multi-marca
 pnpm run test:typography   # Valida unidades px/em y fuentes autorizadas
@@ -69,6 +71,7 @@ pnpm run brand:list        # Lista las marcas registradas y la activeBrand
 pnpm run brand:switch <id> # Conmuta atómicamente la marca activa y sincroniza tokens
 pnpm run brand:create      # Registra una nueva marca con aislamiento de directorio
 pnpm run brand:validate    # Audita la consistencia de marcas y checksums SHA-256
+pnpm run brand:digest [id] # Digiere y asimila los archivos depositados en brands/<id>/inbox/
 pnpm run preset:apply <id> # Aplica un preset de diseño (linear, stripe, vercel, apple, bento, swiss)
 pnpm run color:scale <hex> # Genera una escala tonal 50-950 accesible WCAG
 pnpm run brand:extract     # Extrae identidad visual y paleta desde imagen o URL
